@@ -39,6 +39,9 @@ header{
     width: 100%;
     position: fixed;
     top: 0;
+
+    /* 항상 위에 두기 위해서===================stack order */
+    z-index: 1000;
 }
 header .inner-header{
     /* background: green; */
@@ -118,4 +121,56 @@ section.main{
     background: url(../img/vis_4.jpg) no-repeat center / cover fixed;
     /* 세로화면전체선택!!!!!!!!!!!!==============================================*/
     height: 100vh;
+    position: relative;
+}
+
+section.main .main-title{
+    /* background: tomato; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+    /* 글자 그림자 */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+section.main .main-title h2{
+    font-size: 55px;
+}
+section.main .main-title p{
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+section.main .main-title .view {
+    display: block;
+    font-size: 15px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    width: 180px;
+    padding: 8px 0;
+
+    /* box 가운데로 맞춰주기 */
+    margin: auto;
+    letter-spacing: 2px;
+    position: relative;
+    /* 자식이 넘쳤을때 없애줌 */
+    overflow: hidden;
+
+}
+/* 고스트버튼?? 만들기 */
+section.main .main-title .view::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+}
+section.main .main-title .view:hover::after{
+    width: 100%;
 }
