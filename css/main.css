@@ -30,7 +30,7 @@ br.mo{
 
 /* header */
 header{
-    background: tomato;
+    /* background: tomato; */
     background: rgba(0,0,0, 0.2);
     height: 100px;
     line-height: 100px;
@@ -118,6 +118,9 @@ header .inner-header .gnb-mobile{
 }
 
 
+
+
+
 /* section main */
 section.main{
     /* fix - 사진은 그대로 있음 ==================================================*/
@@ -156,7 +159,7 @@ section.main .main-title .view {
     padding: 8px 0;
 
     /* box 가운데로 맞춰주기 */
-    margin: auto;
+    margin: 0 auto;
     letter-spacing: 2px;
     position: relative;
     /* 자식이 넘쳤을때 없애줌 */
@@ -186,8 +189,11 @@ section .about{
     /* background: yellow; */
     padding: 80px 0;
 }
+section .title{
+    text-align: center;
+}
 section .title h2{
-    font-size: 45;
+    font-size: 45px;
     color: #000;
     margin-bottom: 5px;
 }
@@ -195,6 +201,8 @@ section .title p{
     font-size: 18px;
     color: #555;
 }
+
+
 section.about ul{
     width: 74%;
     margin: 30px auto;
@@ -203,7 +211,8 @@ section.about ul{
 section.about ul li{
     float: left;
     width: 33.33333%;
-    height: 500px;
+    height: 490px;
+    position: relative;
     /* border: 2px solid #000;
     box-sizing: border-box; */
 }
@@ -216,18 +225,14 @@ section.about ul li .img-box img{
     transition: 0.6s;
 }
 section.about ul li a:hover .img-box img{
-    transition: scale(1.2);
+    transform: scale(1.2);
 }
 
-.about div{
-    /* text-align: center; */
-}
-
-section.about div h2{
+/* section.about div h2{
     font-size: 50px;
-    /* text-align: center; */
+    text-align: center;
     padding-top: 20px;
-}
+} */
 /* .about div p{
     font-size: 20px;
     text-align: center;
@@ -236,6 +241,7 @@ section.about div h2{
 .about ul div h3{
     text-align: left;
 } */
+
 section.about ul li a .text{
     padding: 25px;
 
@@ -254,8 +260,8 @@ section.about ul li a .text p.more {
     font-weight: 700;
     /* background: skyblue; */
     padding-left: 40px;
-    position: relative;
-    bottom: 5px;
+    position: absolute;
+    bottom: 15px;
 }
 section.about ul li a .text p.more::before{
     content: '→';
@@ -271,6 +277,8 @@ section.about ul li a .text p.more::before{
     top: -5px;
 }
 
+
+
 /* section innovation */
 section.innovation {
     margin-bottom: 150px;
@@ -282,7 +290,7 @@ section.innovation .img-box {
     margin: 50px auto 0;
     background: orange;
     background: url('../img/product_1.jpg') no-repeat center / cover ;
-
+    position: relative;
 }
 section.innovation .img-box .inner{
     background: #3a3c4e;
@@ -290,8 +298,8 @@ section.innovation .img-box .inner{
     color: #fff;
     position: absolute;
     left: 50%;
-    top: 50%;
-    /* transform: translate(-50%, -50%); */
+    top: 75%;
+    transform: translate(-50%, 0);
 }
 section.innovation .img-box .inner h3{
     background: #fff;
@@ -320,11 +328,200 @@ section.innovation .img-box .inner .bottom a:hover{
 
 }
 
+
+
 /* section me style */
 section.me{
     padding: 80xp 0;
     margin-bottom: 150px;
     background: url('../img/me.jpg') no-repeat center / cover;
 }
-section me ul.list {
+section.me ul.list {
+    width: 74%;
+    margin: 50px auto;
+    /* background: orange; */
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+section.me ul.list > li{
+    padding: 30px 60px;
+}
+section.me ul.list > li:first-child{
+    border-bottom: 1px solid #ddd;
+}
+section.me ul.list > li h3{
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+}
+section.me ul.list > li h3 span{
+    position: absolute;
+    left: -35px;
+    color: #ff8342;
+}
+section.me ul.list > li p{
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+section.me ul.list > li .more{
+    font-size: 16px;
+    font-weight: 700;
+}
+section.me ul.list > li .more span{
+    color: #ff8342;
+    margin-left: 3px;
+    font-size: 14px;
+}
+section.me ul.list ul.in{
+    margin-bottom: 30px;
+}
+section.me ul.list ul.in li em{
+    float: left;
+    font-weight: 700;
+    width: 12%;
+}
+section.me ul.list ul.in li p{
+    float: left;
+    position: relative;
+}
+section.me ul.list ul.in li p::before{
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #ff8342;
+    position: absolute;
+    left: -40px;
+    top: 10px;
+}
+#incruit-btn{
+    display: block;
+    width: 280px;
+    background: #ff8342;
+    color: #fff;
+    margin: 0 auto;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+/* section sns style */
+section.sns {
+    margin-bottom: 60px;
+}
+section.sns ul{
+    width: 74%;
+    margin: 50px auto;
+}
+section.sns ul li{
+    margin-right: 2%;
+    width: 32%;
+    float: left;
+}
+section.sns ul li:last-child{
+    margin-right: 0;
+}
+section.sns ul li .img-box{
+    height: 255px;
+    overflow: hidden;
+    position: relative;
+}
+section.sns ul li .img-box::before{
+    content: '';
+    width: 0;
+    background: rgba(255,131,66,0.75);
+    position: absolute;
+    transition: 0.5s;
+}
+section.sns ul li a:hover .img-box::before{
+    width: 100%;
+}
+section.sns ul li .img-box::after{
+    content: 'BLOG';
+    font-size: 15px;
+    font-family: 'Exo 2', sans-serif;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    color: #fff;
+    padding: 5px 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.7s;
+}
+section.sns ul li a:hover .img-box::after{
+    opacity: 1;
+}
+section.sns ul li .img-box img {
+    width: 100%;
+}
+section.sns ul li .bottom{
+    padding: 20px 0 20px 30px;
+    box-sizing: border-box;
+}
+section.sns ul li .bottom p{
+    font-size: 18px;
+}
+section.sns ul li .bottom p.color{
+    color: #ff8342;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+section.sns ul li .bottom p.time{
+    color: #999;
+    font-size: 14px;
+    margin-top: 30px;
+}
+section.sns ul li .bottom p.time i{
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+
+
+/* footer style */
+footer {
+    border-top: 1px solid #999;
+    padding: 30px 0;
+}
+footer .inner{
+    width: 84%;
+    margin: 0 auto;
+}
+footer .inner .ft-logo {
+    float: left;
+    width: 14%;
+}
+footer .inner .ft-logo img{
+    width: 100%;
+}
+footer .inner .address {
+    float: left;
+    margin-left: 100px;
+    margin-top: 35px;
+}
+footer .inner .address li:first-child{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+footer .inner .address li:last-child{
+    color: #999;
+}
+footer .inner .list{
+    float: right;
+    margin-top: 40px;
+}
+footer .inner .list li{
+    float: left;
+    margin-left: 80px;
+}
+footer .inner .list li:last-child{
+    font-weight: 700;
+}
+footer .inner .list li a:hover{
+    color: #ff8342;
+    text-decoration: underline;
 }
